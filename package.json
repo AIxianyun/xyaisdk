@@ -1,0 +1,52 @@
+{
+  "name": "@xyai/sdk",
+  "version": "1.0.0",
+  "description": "闲云智链开放平台 SDK - 通过 API Key 调用 AI 技能，支持非流式与流式输出",
+  "keywords": [
+    "xyai",
+    "openapi",
+    "ai",
+    "llm",
+    "skills",
+    "stream",
+    "openapi-sdk"
+  ],
+  "author": "XYAI Team",
+  "license": "MIT",
+  "homepage": "https://github.com/AIxianyun/xyaisdk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AIxianyun/xyaisdk.git"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean --target node18",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src/",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.2.0"
+  }
+}

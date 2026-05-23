@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output (published via package.json files field)
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+
+# Test
+coverage/
+
+# Misc
+*.tgz
+.cache/
