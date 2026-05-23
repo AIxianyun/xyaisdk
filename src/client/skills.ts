@@ -40,19 +40,17 @@ export class SkillsModule {
     if (params?.keyword) url.searchParams.set('keyword', params.keyword);
     if (params?.sort) url.searchParams.set('sort', params.sort);
 
-    const data = await this.request<{ data: SkillListResult }>(url, { method: 'GET' });
-    return data.data;
+    return this.request<SkillListResult>(url, { method: 'GET' });
   }
 
   /**
    * 获取技能详情
    */
   async info(skillId: string): Promise<SkillDetail> {
-    const data = await this.request<{ data: SkillDetail }>(
+    return this.request<SkillDetail>(
       `${this.config.baseURL}/skills/${encodeURIComponent(skillId)}`,
       { method: 'GET' }
     );
-    return data.data;
   }
 
   /**
@@ -66,14 +64,13 @@ export class SkillsModule {
     if (maxTokens !== undefined) body.maxTokens = maxTokens;
     if (temperature !== undefined) body.temperature = temperature;
 
-    const data = await this.request<{ data: SkillResponse }>(
+    return this.request<SkillResponse>(
       `${this.config.baseURL}/skills/${encodeURIComponent(skillId)}/invoke`,
       {
         method: 'POST',
         body,
       }
     );
-    return data.data;
   }
 
   /**

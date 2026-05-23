@@ -1,4 +1,4 @@
-# @xyai/sdk
+# @aixianyun/sdk
 
 闲云智链开放平台 JavaScript/TypeScript SDK。通过 API Key 即可调用平台上的 AI 技能，支持非流式和流式输出。
 
@@ -7,11 +7,11 @@
 ## 安装
 
 ```bash
-npm install @xyai/sdk
+npm install @aixianyun/sdk
 ```
 
 ```bash
-yarn add @xyai/sdk
+yarn add @aixianyun/sdk
 ```
 
 ```bash
@@ -63,7 +63,7 @@ curl -X POST https://openapi.xyaichain.com/api/keys \
 ## 快速开始
 
 ```typescript
-import { XYAIClient } from '@xyai/sdk'
+import { XYAIClient } from '@aixianyun/sdk'
 
 const client = new XYAIClient({ apiKey: process.env.XYAI_API_KEY! })
 

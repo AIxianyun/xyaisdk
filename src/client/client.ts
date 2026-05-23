@@ -7,7 +7,7 @@ import { SkillsModule } from './skills';
 import { XYAISDKError } from '../errors/index';
 
 const DEFAULT_BASE_URL = 'https://api.xyaichain.com/api/v1';
-const DEFAULT_TIMEOUT = 60_000;
+const DEFAULT_TIMEOUT = 180_000;
 
 export class XYAIClient {
   /** 技能模块 */

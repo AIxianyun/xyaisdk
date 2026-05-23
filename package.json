@@ -1,6 +1,6 @@
 {
-  "name": "@xyai/sdk",
-  "version": "1.0.0",
+  "name": "@aixianyun/sdk",
+  "version": "1.0.1",
   "description": "闲云智链开放平台 SDK - 通过 API Key 调用 AI 技能，支持非流式与流式输出",
   "keywords": [
     "xyai",
